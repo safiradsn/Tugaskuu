@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-image: url('salsa.jpg');
+                width: 100%;
+                padding: 8px 10px;
+                color: black;
+                font-size: larger;
+            }
+        </style>
+
+        <title>Sfrslsaa_</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.min.js"></script>
+    </head>
+    <body>
+        <h2 style="text-align:center">BIODATA RESMI</h2>
+
+        <div id="app">
+        <h1>   Nama: <input type="text" v-model="text"></h1>
+
+        <h1>   Tempat Tanggal Lahir: <input type="text" v-model="texty"></h1>
+   
+        <h1>    Agama: <input type="radio" v-model ="lesson" value="Islam">Islam
+            <input type="radio" v-model ="lesson" value="Kristen">Kristen
+            <input type="radio" v-model ="lesson" value="Budha">Budha
+            <input type="radio" v-model ="lesson" value="Hindu">Hindu</h1>
+
+            <h1>
+           Hobi: <input type="checkbox" v-model="hobi" value="Tidur">Tidur
+           <input type="checkbox" v-model="hobi" value="Makan">Makan
+           <input type="checkbox" v-model="hobi" value="Lari">Lari
+           <input type="checkbox" v-model="hobi" value="Rebahan">Rebahan
+            </h1>
+
+        <h1>
+            <span>Alamat:</span>
+            <p style="white-space: pre-line;"></p>
+            <textarea v-model="message" placeholder="..."></textarea></h1>
+
+        <h1>
+           Sekolah: <select v-model="selected">
+            <option disabled value="">pilih</option>
+            <option>TK</option>
+            <option>SD</option>
+            <option>SMP</option>
+            <option>SMA</option>
+            <option>SMK</option>
+            <option>MahaSiswa</option>
+        </select>
+        <span>Selected: {{ selected }}</span></h1>
+        <h3>{{ text }}</h3>
+        <h3>{{ texty }}</h3>
+        <h3>{{ lesson }}</h3>
+        <h3>{{ hobi }}</h3>
+        <h3>{{ message }}</h3>
+        <h3>{{ selected }}</h3>
+        </div>
+    </body>
+<script>
+    var vo = new Vue({
+        el : '#app',
+        data: {
+            lesson : [],
+            hobi : [],
+            message : [],
+            selected : [],
+        },
+    });
+</script>
+</html>
